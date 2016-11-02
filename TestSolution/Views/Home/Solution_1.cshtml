@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Решение 1</title>
+</head>
+<body>
+    <div> 
+        <h3> Решение 1 </h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td><p>Для решения поставленной задачи былы подключенны библиотеки : Google.Apis.Customsearch.v1 Client Library Google APIs Client Library, Google APIs Core Client Library <br>
+                    А так же использован .NET Framework C# Service Proxy Class Library (фаил BingSearchContainer.cs) взятый с ресурса https://datamarket.azure.com/dataset/explore/getproxy/5ba839f1-12ce-4cce-bf57-a49d98d29a44 </p></td>
+                </tr>
+                <tr>
+                    <td><p>Введите запрос</p></td>
+                    <td><input type="text" name="Query" /></td>
+                    <td><input type="submit" value="Поиск" /></td>
+                </tr>
+                <tr>
+                    <td> <p>Результат Google</p></td>
+                </tr>
+                <tr>
+                    <td><p>Заголовок: @ViewBag.GoogleResulTitle<br />
+                        URL: @ViewBag.GoogleResultURL</p></td>
+                </tr>
+                <tr>
+                    <td> <p>Результат Bing</p></td>
+                </tr>
+                <tr>
+                    <td><p>Заголовок: @ViewBag.BingResulTitle<br />
+                        URL: @ViewBag.BingResultURL</p></td>
+                </tr>
+                <tr>
+                    <td><p><a href="Index"><< Назад</a></p></td>
+                </tr>
+            </table>
+         </form>
+</div>
+</body>
+</html>

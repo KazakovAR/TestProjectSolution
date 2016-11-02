@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Solution_2</title>
+</head>
+<body>
+    <div> 
+        <h3> Решение 2 </h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td><p>Текст файла input.txt</p></td>
+                    <td><p>Текст файла patterns.txt</p></td>
+                </tr>
+                <tr>
+                    <td><p> @ViewBag.inputText </p></td>
+                    <td><p>@foreach (var line in ViewBag.patternsText)
+                        {
+                            @line<br />
+                        }</p></td>
+                   
+                </tr>
+                <tr><td><p>Результат</p></td></tr>
+                <tr>
+                    <td><p>
+                                @foreach (var line in ViewBag.Result)
+                                {
+                                    @line<br />
+                                }
+                    </p></td>
+                </tr>
+                <tr><td><p>Выберите режим поиска</p></td></tr>
+                <tr><td>
+                        <input type="radio" name="modes" value="Exactly"> Точное совпадение
+                    <br>
+                        <input type="radio" name="modes" value="Somewhere"> Точное совпадение с элементом строки
+                    <br>
+                        <input type="radio" name="modes" value="WithEditDistance"> Частичное совпадение со строкой
+                </td></tr>
+                <tr><td><input type="submit" value="Поиск" /></td></tr>
+
+                <tr>
+                    <td><p><a href="Index"><< Назад</a></p></td>
+                </tr>
+            </table>
+        </form>
+</div>
+</body>
+</html>
